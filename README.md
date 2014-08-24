@@ -1,5 +1,5 @@
 # hudl-kickoff-dark-syntax theme
 
-Syntax theme based on the colors from Hudl's kickoff style-guide
+A light syntax theme based on Hudl's kickoff colors
 
 ![screenshot](http://i.imgur.com/NWPpJ5g.png)
