@@ -1,7 +1,7 @@
 {
   "name": "hudl-kickoff-dark-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Hudl's kickoff colors",
   "repository": "https://github.com/mfouquet/hudl-kickoff-dark-syntax",
   "license": "MIT",
