@@ -1,20 +1,15 @@
 @import "syntax-variables";
 
-.editor-colors {
-  background-color: @dark;
-  color: @medium-gray;
-}
-
-.editor {
-  background-color: @dark;
-  color: @medium-gray;
+atom-text-editor, :host {
+  background-color: @dark-blue;
+  color: @med-gray;
 
   .wrap-guide {
-    background-color: @dark-1;
+    background-color: @syntax-wrap-guide-color;
   }
 
   .indent-guide {
-    color: @dark-1;
+    color: @med-blue;
   }
 
   .invisible-character {
@@ -22,12 +17,12 @@
   }
 
   .gutter {
-    background-color: @dark;
-    color: @dark-2;
+    background-color: @dark-blue;
+    color: @light-blue;
 
     .line-number {
       &.cursor-line {
-        background-color: @dark-1;
+        background-color: @med-blue;
         color: lighten(@black, 10%);
       }
 
@@ -37,12 +32,11 @@
     }
   }
 
-   // Let's space out the line number for collapsed code
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: lighten(@dark-2, 20%);
-    padding-left: 15px;
+    color: lighten(@light-blue, 20%);
+    padding-left: 10px;
   }
 
   .invisible {
@@ -51,6 +45,7 @@
 
   .cursor {
     color: @green;
+    ;
   }
 
   .selection .region {
@@ -58,12 +53,14 @@
   }
 }
 
-.editor .search-results .marker .region {
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
   background-color: transparent;
   border: 1px solid @orange;
 }
 
-.editor .search-results .marker.current-result .region {
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
   border: 1px solid @orange;
 }
 
@@ -83,14 +80,14 @@
 }
 
 .keyword {
-  color: @dark-2;
+  color: @light-blue;
 
   &.control {
     color: lighten(@dark-gray, 10%);
   }
 
   &.operator {
-    color: @dark-2;
+    color: @light-blue
   }
 
   &.other.special-method {
@@ -99,12 +96,11 @@
 
   &.other.unit {
     color: lighten(@orange, 20%);
-    padding-left: 3px;
   }
 }
 
 .storage {
-  color: @dark-2;
+  color: @light-blue;
 }
 
 .constant {
@@ -135,7 +131,7 @@
   }
 
   &.parameter.function {
-    color: @dark-2;
+    color: @light-blue;
   }
 }
 
@@ -146,6 +142,7 @@
 
 .string {
   color: lighten(@red, 10%);
+
 
   &.regexp {
     color: lighten(@red, 10%);
@@ -175,12 +172,12 @@
 
     &.heading,
     &.identity {
-      color: lighten(@dark-2, 10%);
+      color: lighten(@light-blue, 10%);
     }
 
     &.bold {
       color: lighten(@orange, 10%);
-      font-style: bold;
+      font-weight: bold;
     }
 
     &.italic {
@@ -204,7 +201,7 @@
     color: lighten(@orange, 10%);
 
     &.any-method {
-      color: lighten(@dark-2, 10%);
+      color: lighten(@light-blue, 10%);
     }
   }
 }
@@ -219,18 +216,19 @@
   }
 
   &.name.section {
-    color: lighten(@dark-2, 10%);
+    color: lighten(@light-blue, 10%);
   }
 
   &.name.tag {
     color: @dark-gray;
+    font-weight: 700;
   }
 
   &.other.attribute-name {
     color: @orange;
 
     &.id {
-      color: lighten(@dark-2, 10%);
+      color: lighten(@light-blue, 10%);
     }
   }
 }
@@ -245,7 +243,7 @@
   }
 
   &.require {
-    color: lighten(@dark-2, 10%);
+    color: lighten(@light-blue, 10%);
   }
 
   &.selector {
@@ -253,7 +251,7 @@
   }
 
   &.separator {
-    background-color: @medium-gray;
+    background-color: @med-gray;
     color: @syntax-text-color;
   }
 }
@@ -265,7 +263,7 @@
 .markup {
   &.bold {
     color: @orange;
-    font-style: bold;
+    font-weight: bold;
   }
 
   &.changed {
@@ -282,7 +280,7 @@
   }
 
   &.heading .punctuation.definition.heading {
-    color: lighten(@dark-2, 10%);
+    color: lighten(@light-blue, 10%);
   }
 
   &.inserted {
@@ -309,6 +307,7 @@
   }
 }
 
-.editor.mini .scroll-view {
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
   padding-left: 1px;
 }

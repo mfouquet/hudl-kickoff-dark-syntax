@@ -1,3 +1,6 @@
+## 1.2.0
+* Fix deprecated items
+
 ## 1.0.3
 * Update orange color
 
@@ -9,5 +12,4 @@
 * Update descriptions
 
 ## 1.0.0 - First Release
-* Every feature added
-* Every bug fixed
+* First release

@@ -6,6 +6,6 @@
   "repository": "https://github.com/mfouquet/hudl-kickoff-dark-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=1.0.0 <2.0.0"
   }
 }
